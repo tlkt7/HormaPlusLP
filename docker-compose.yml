@@ -23,15 +23,31 @@ services:
     restart: always
     ports:
       - "80:80"
+      - "443:443"
     depends_on:
       - backend
     volumes:
       - static_volume:/usr/share/nginx/html/static
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+      - certbot-www:/var/www/certbot
     networks:
       - horma-network
 
+  certbot:
+    image: certbot/certbot
+    container_name: horma-certbot
+    volumes:
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+      - certbot-www:/var/www/certbot
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+
 volumes:
   static_volume:
+  certbot-etc:
+  certbot-var:
+  certbot-www:
 
 networks:
   horma-network:
