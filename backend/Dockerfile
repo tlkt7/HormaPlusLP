@@ -16,9 +16,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy application code
 COPY . .
 
-# Collect static files
-RUN python manage.py collectstatic --noinput
-
 EXPOSE 8000
 
 CMD ["gunicorn", "horma_backend.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "3"]
