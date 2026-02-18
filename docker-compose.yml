@@ -7,7 +7,7 @@ services:
     restart: always
     environment:
       - DEBUG=False
-      - ALLOWED_HOSTS=82.115.43.196,localhost
+      - ALLOWED_HOSTS=hormaplus.com,www.hormaplus.com,82.115.43.196,localhost
       - SECRET_KEY=${SECRET_KEY:-your-secret-key-change-this}
     volumes:
       - ./backend:/app
