@@ -2,19 +2,19 @@ export default function Team() {
   const team = [
     {
       name: "Urazbekov Bexultan",
-      role: "CEO",
+      role: ["Chief Executive Officer", "Co-founder"],
       photo: "/team-bexultan.jpg",
       hasPhoto: true
     },
     {
       name: "Sagimbekov Adil",
-      role: "CDO",
+      role: ["Chief Design Officer", "Co-founder"],
       photo: "/team-adil.jpg",
       hasPhoto: true
     },
     {
       name: "Tlektes Ibrahhim",
-      role: "CTO",
+      role: "Chief Technology Officer, Co-founder",
       photo: "/team-ibrahim.jpg",
       hasPhoto: true
     },
@@ -53,7 +53,7 @@ export default function Team() {
             {team.map((member, index) => (
               <div
                 key={index}
-                className="glass-transparent-form rounded-2xl p-6 hover:scale-105 transition-transform duration-200"
+                className="glass-transparent-form rounded-2xl p-6 hover:scale-105 transition-transform duration-200 text-center"
               >
                 {member.hasPhoto ? (
                   <div 
@@ -66,9 +66,31 @@ export default function Team() {
                   </div>
                 )}
                 <h3 className="text-lg font-bold text-black mb-1">{member.name}</h3>
-                <p className="text-black/70 text-sm font-light">{member.role}</p>
+                <p className="text-black/70 text-sm font-light">
+                  {Array.isArray(member.role) ? (
+                    <>
+                      <span>{member.role[0]}</span>
+                      <br />
+                      <span>{member.role[1]}</span>
+                    </>
+                  ) : (
+                    member.role
+                  )}
+                </p>
               </div>
             ))}
+          </div>
+
+          {/* Team Philosophy */}
+          <div className="mt-16 text-center max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-black/90 font-light leading-relaxed mb-4">
+              We believe in the safe, non-invasive, and effective power of our biometric 
+              <br />
+              intelligence so deeply, we use it ourselves every day.
+            </p>
+            <p className="text-xl md:text-2xl text-black/90 font-bold leading-relaxed">
+              We don't just track problems, we catch them before they exist!
+            </p>
           </div>
         </div>
       </div>

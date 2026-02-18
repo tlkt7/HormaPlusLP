@@ -81,14 +81,9 @@ function App() {
       {/* Footer */}
       <footer className="relative z-10 glass border-t border-black/5 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <span className="text-2xl font-display font-light tracking-wider text-gradient">
-                HORMA
-              </span>
-            </div>
+          <div className="flex justify-center items-center">
             <div className="text-black/60 text-sm">
-              &copy; 2026 Horma+. All rights reserved.
+              &copy; 2026 <span className="font-bold" style={{ fontFamily: 'Helvetica, Arial, sans-serif' }}>Horma+</span>. All rights reserved.
             </div>
           </div>
         </div>

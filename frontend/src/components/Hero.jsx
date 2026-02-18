@@ -44,14 +44,14 @@ export default function Hero() {
             e.target.style.background = 'linear-gradient(135deg, #f5f5f5 0%, #e5e5e5 100%)'
           }}
         />
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/20"></div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto w-full">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-16 items-end">
           {/* Left Column - Main Content */}
-          <div className="space-y-8 lg:mt-20">
+          <div className="space-y-8 lg:mb-8">
             {/* Main heading */}
             <div className="space-y-6">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-sans font-bold tracking-tight leading-none drop-shadow-sm">
@@ -68,7 +68,9 @@ export default function Hero() {
             {/* Description/Clickbait */}
             <div className="max-w-xl">
               <p className="text-base md:text-lg text-white/80 font-light leading-relaxed italic drop-shadow-sm">
-                Meet <span className="text-white font-medium not-italic">Horma+ Ring</span>, a wellness ring that provides continuous, non-invasive glucose and hormone monitoring
+                Meet <span className="text-white font-medium not-italic">Horma+ Ring</span>, a wellness ring that provides continuous, 
+                <br />
+                non-invasive glucose and hormone monitoring
               </p>
             </div>
           </div>
@@ -77,12 +79,12 @@ export default function Hero() {
           <div className="w-full max-w-md mx-auto lg:ml-auto lg:mr-0 lg:mt-20">
             <div className="glass-transparent-form rounded-3xl p-8">
               {/* Form Header */}
-              <div className="mb-6">
-                <h3 className="text-2xl md:text-3xl font-sans font-bold mb-3 text-black">
+              <div className="mb-6 text-center">
+                <h3 className="text-2xl md:text-3xl font-sans font-bold mb-3 text-white">
                   Horma+ Priority Access
                 </h3>
-                <p className="text-black/70 font-light leading-relaxed text-sm">
-                  Be among the first to experience tomorrow's health technology, with personalized insights tailored to your hormonal wellness.
+                <p className="text-white/90 font-light leading-relaxed text-sm max-w-md mx-auto">
+                  Be among the first for whom we adapt the technologies of the future, providing personalized care for your hormonal health.
                 </p>
               </div>
 
@@ -96,7 +98,7 @@ export default function Hero() {
                     onChange={handleChange}
                     required
                     placeholder="Full name"
-                    className="w-full px-5 py-3 glass-transparent text-black rounded-xl focus:ring-2 focus:ring-black/20 focus:outline-none transition-all duration-200 font-light placeholder-black/50 text-sm"
+                    className="w-full px-5 py-3 glass-transparent text-white rounded-xl focus:ring-2 focus:ring-white/20 focus:outline-none transition-all duration-200 font-light placeholder-white/50 text-sm"
                   />
                 </div>
 
@@ -108,7 +110,7 @@ export default function Hero() {
                     onChange={handleChange}
                     required
                     placeholder="Email address"
-                    className="w-full px-5 py-3 glass-transparent text-black rounded-xl focus:ring-2 focus:ring-black/20 focus:outline-none transition-all duration-200 font-light placeholder-black/50 text-sm"
+                    className="w-full px-5 py-3 glass-transparent text-white rounded-xl focus:ring-2 focus:ring-white/20 focus:outline-none transition-all duration-200 font-light placeholder-white/50 text-sm"
                   />
                 </div>
 
@@ -120,7 +122,7 @@ export default function Hero() {
                     onChange={handleChange}
                     required
                     placeholder="Phone number"
-                    className="w-full px-5 py-3 glass-transparent text-black rounded-xl focus:ring-2 focus:ring-black/20 focus:outline-none transition-all duration-200 font-light placeholder-black/50 text-sm"
+                    className="w-full px-5 py-3 glass-transparent text-white rounded-xl focus:ring-2 focus:ring-white/20 focus:outline-none transition-all duration-200 font-light placeholder-white/50 text-sm"
                   />
                 </div>
 

@@ -2,41 +2,46 @@ export default function Stats() {
   const stats = [
     {
       value: "589M",
-      label: "Living with diabetes worldwide"
+      label: "adults live with diabetes"
     },
     {
       value: "332M",
-      label: "Affected by depression globally"
+      label: "live with depression"
     },
     {
       value: "936M",
-      label: "At OSA risk, mostly undiagnosed"
+      label: "adults worldwide at risk of / living with OSA"
     },
     {
       value: "14-25%",
-      label: "Women face menstrual irregularities"
+      label: "of women experience menstrual irregularities"
     },
     {
       value: "850M",
-      label: "Struggle with sleep issues"
+      label: "people struggle with sleep issues"
     }
   ]
 
   return (
-    <section id="stats" className="relative min-h-screen flex items-center justify-center py-20 px-4 bg-black">
-      <div className="max-w-7xl mx-auto w-full">
-        {/* Main Stat */}
-        <div className="text-center mb-20">
-          <h2 className="text-6xl md:text-8xl font-sans font-bold mb-8 text-white">
-            1.7B
-          </h2>
-          <p className="text-xl md:text-2xl text-white/80 font-light leading-relaxed max-w-4xl mx-auto">
-            with hormonal or metabolic imbalances don't get regular monitoring
-          </p>
-        </div>
+    <section id="stats" className="relative min-h-screen flex items-center py-20 px-4">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center" 
+        style={{ backgroundImage: 'url(/stats-background.jpg)' }}
+      ></div>
+      <div className="absolute inset-0 bg-black/40"></div>
 
-        {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+      <div className="relative z-10 w-full max-w-7xl mx-auto">
+        <div className="flex flex-col justify-between min-h-[80vh]">
+          {/* Main Stat */}
+          <div className="text-center flex-grow flex flex-col justify-center mb-16">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-sans font-light leading-tight text-white max-w-6xl mx-auto">
+              <span className="font-bold">1.7B</span> with hormonal or metabolic imbalances <span className="font-bold">don't get regular monitoring</span> and lack predictive insights
+            </h2>
+          </div>
+
+          {/* Stats Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {stats.map((stat, index) => (
             <div
               key={index}
@@ -50,6 +55,7 @@ export default function Stats() {
               </div>
             </div>
           ))}
+        </div>
         </div>
       </div>
     </section>

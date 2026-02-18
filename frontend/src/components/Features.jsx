@@ -5,6 +5,19 @@ export default function Features() {
 
   const features = [
     {
+      title: 'Hormones',
+      description: 'Comprehensive hormonal balance monitoring',
+      icon: '⚗️',
+      phoneContent: {
+        title: 'Hormonal Balance',
+        subtitle: 'Overall status',
+        mainValue: 'Good',
+        mainUnit: '',
+        chart: '📉',
+        status: 'Balanced'
+      }
+    },
+    {
       title: 'Glucose Monitoring',
       description: 'Continuous glucose monitoring for metabolic health insights',
       icon: '🩸',
@@ -55,19 +68,6 @@ export default function Features() {
         chart: '🧘‍♀️',
         status: 'Relaxed State'
       }
-    },
-    {
-      title: 'Hormones',
-      description: 'Comprehensive hormonal balance monitoring',
-      icon: '⚗️',
-      phoneContent: {
-        title: 'Hormonal Balance',
-        subtitle: 'Overall status',
-        mainValue: 'Good',
-        mainUnit: '',
-        chart: '📉',
-        status: 'Balanced'
-      }
     }
   ]
 
@@ -85,17 +85,14 @@ export default function Features() {
       <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-white/30 to-white/50"></div>
 
       {/* Content */}
-      <div className="relative z-10 w-full px-4 py-20">
-        <div className="max-w-6xl mx-auto">
+      <div className="relative z-10 w-full px-4 py-20 min-h-screen flex items-center">
+        <div className="max-w-6xl mx-auto w-full">
           
           {/* Section Title */}
           <div className="text-center mb-12">
-            <h2 className="text-5xl md:text-6xl font-sans font-bold mb-4 text-black drop-shadow-sm">
-              A comprehensive view of your health
+            <h2 className="text-5xl md:text-6xl font-sans font-bold text-black drop-shadow-sm">
+              A comprehensive view of your health at every stage
             </h2>
-            <p className="text-black/70 text-lg font-light">
-              at every stage
-            </p>
           </div>
 
           {/* Feature Tabs */}
@@ -104,10 +101,10 @@ export default function Features() {
               <button
                 key={index}
                 onClick={() => setActiveFeature(index)}
-                className={`px-6 py-3 rounded-full text-sm font-light tracking-wide transition-all duration-200 ${
+                className={`px-6 py-3 rounded-full text-sm font-light tracking-wide transition-all duration-200 glass-transparent-form ${
                   activeFeature === index
-                    ? 'bg-white text-black shadow-lg scale-105'
-                    : 'glass-transparent text-black/70 hover:text-black hover:bg-white/20'
+                    ? 'text-black shadow-lg scale-105'
+                    : 'text-black/70 hover:text-black hover:scale-105'
                 }`}
               >
                 {feature.title}

@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: horma-backend
+    restart: always
+    environment:
+      - DEBUG=False
+      - ALLOWED_HOSTS=82.115.43.196,localhost
+      - SECRET_KEY=${SECRET_KEY:-your-secret-key-change-this}
+    volumes:
+      - ./backend:/app
+      - static_volume:/app/staticfiles
+    expose:
+      - "8000"
+    networks:
+      - horma-network
+
+  frontend:
+    build: ./frontend
+    container_name: horma-frontend
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    volumes:
+      - static_volume:/usr/share/nginx/html/static
+    networks:
+      - horma-network
+
+volumes:
+  static_volume:
+
+networks:
+  horma-network:
+    driver: bridge

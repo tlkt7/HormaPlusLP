@@ -42,13 +42,15 @@ export default function Contact() {
 
       <div className="relative z-10 w-full px-4 py-20">
         <div className="max-w-2xl mx-auto">
-          <div className="glass-transparent-form rounded-3xl p-12">
+          <div className="glass-transparent-form rounded-3xl p-12 border border-black/10 shadow-2xl">
             <div className="text-center mb-10">
               <h2 className="text-4xl md:text-5xl font-sans font-bold mb-4 text-black">
                 Horma+ Priority Access
               </h2>
               <p className="text-black/70 font-light leading-relaxed">
-                Be among the first to experience tomorrow's health technology, with personalized insights tailored to your hormonal wellness.
+                Be among the first for whom we adapt the technologies of the future, 
+                <br />
+                providing personalized care for your hormonal health.
               </p>
             </div>
 

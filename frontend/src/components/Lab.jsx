@@ -2,30 +2,18 @@ export default function Lab() {
   const plans = [
     {
       name: "Horma+ Core",
-      features: [
-        "Glucose tracking",
-        "Sleep analysis",
-        "Basic hormonal insights"
-      ]
+      subtitle: "Foundation wellness monitoring for everyday health",
+      features: []
     },
     {
       name: "Horma+ Balance",
-      features: [
-        "Everything in Core",
-        "Menstrual cycle tracking",
-        "Stress & cortisol monitoring",
-        "Personalized recommendations"
-      ]
+      subtitle: "Comprehensive tracking for hormonal and metabolic wellness",
+      features: []
     },
     {
       name: "Horma+ Prime",
-      features: [
-        "Everything in Balance",
-        "Advanced hormone panel",
-        "Metabolic age tracking",
-        "1-on-1 health coaching",
-        "Priority lab processing"
-      ]
+      subtitle: "Complete health optimization with expert guidance",
+      features: []
     }
   ]
 
@@ -52,16 +40,10 @@ export default function Lab() {
             {plans.map((plan, index) => (
               <div
                 key={index}
-                className="glass-transparent-form rounded-2xl p-6 hover:scale-105 transition-transform duration-200"
+                className="glass-transparent-form rounded-2xl p-6 hover:scale-105 transition-transform duration-200 text-center"
               >
-                <h3 className="text-2xl font-bold mb-4 text-black">{plan.name}</h3>
-                <ul className="space-y-2">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="text-black/80 text-sm font-light">
-                      • {feature}
-                    </li>
-                  ))}
-                </ul>
+                <h3 className="text-2xl font-bold mb-3 text-white">{plan.name}</h3>
+                <p className="text-white/90 text-sm font-light leading-relaxed">{plan.subtitle}</p>
               </div>
             ))}
           </div>
